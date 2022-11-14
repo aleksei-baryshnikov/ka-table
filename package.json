@@ -1,8 +1,8 @@
 {
-  "name": "ka-table",
+  "name": "@konstructly/ka-table",
   "version": "7.6.3",
   "license": "MIT",
-  "repository": "github:komarovalexander/ka-table",
+  "repository": "github:@konstructly/ka-table",
   "homepage": "https://komarovalexander.github.io/ka-table/#/overview",
   "dependencies": {
     "@types/enzyme": "^3.10.5",
@@ -88,6 +88,9 @@
       "src/lib/Components/**/*.{ts,tsx}",
       "src/lib/Utils/*.ts"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "datagrid",
