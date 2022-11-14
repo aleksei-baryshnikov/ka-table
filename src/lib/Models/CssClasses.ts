@@ -24,6 +24,8 @@ export class CssClasses {
   public theadCellHeight = 'ka-thead-cell-height';
   public summaryCell = 'ka-summary-cell';
   public summaryRow = 'ka-summary-row';
+  public summaryLineRow = 'ka-summary-line-row';
+  public summaryLineCell = 'ka-summary-line-cell';
   public theadCellContent = 'ka-thead-cell-content';
   public theadCellContentWrapper = 'ka-thead-cell-content-wrapper';
   public theadCellResize = 'ka-thead-cell-resize';
@@ -42,7 +44,6 @@ export class CssClasses {
   public popupContent = 'ka-popup-content';
   public popupContentItem = 'ka-popup-content-item';
 
-  public iconClose = 'ka-icon ka-icon-close';
   public iconGroupArrowCollapsed = 'ka-icon ka-icon-group-arrow ka-icon-group-arrow-collapsed';
   public iconGroupArrowExpanded = 'ka-icon ka-icon-group-arrow ka-icon-group-arrow-expanded';
   public iconFilter = 'ka-icon ka-icon-filter ka-pointer';

@@ -51,6 +51,7 @@
 }
 .ka-tbody{
   height: 100%;
+  transition: all .2s;
 }
 .ka-thead-cell, .ka-cell{
   text-align: left;
@@ -310,4 +311,16 @@
 
 .ka-header-filter-button-has-value{
   font-weight: bold;
+}
+
+.ka-summary-line-row {
+  width: 100%;
+  position: sticky;
+  background: white;
+  cursor: pointer;
+}
+
+.ka-summary-line-cell {
+  text-align: left;
+  padding-left: 10px;
 }

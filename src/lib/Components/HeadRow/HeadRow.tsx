@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import defaultOptions from '../../defaultOptions';
 import { IHeadRowProps } from '../../props';
@@ -16,13 +16,20 @@ const HeadRow: React.FunctionComponent<IHeadRowProps> = (props) => {
     dispatch,
     filteringMode,
     groupColumnsCount,
-    sortingMode
+    sortingMode,
+    setHeaderRowHeight
   } = props;
   const { elementAttributes, content } = getElementCustomization({
     className: defaultOptions.css.theadRow
   }, props, childComponents.headRow);
+  const trRef = useRef<HTMLTableRowElement | null>(null);
+
+  useEffect(() => {
+    setHeaderRowHeight?.(trRef.current?.getBoundingClientRect().height)
+  }, [trRef, setHeaderRowHeight]);
+
   return (
-    <tr {...elementAttributes}>
+    <tr {...elementAttributes} ref={trRef}>
       {
         content ||
         (

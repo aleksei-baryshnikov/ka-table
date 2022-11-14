@@ -1,10 +1,10 @@
-
 import { IRowsProps } from './Components/Rows/Rows';
 import { ITableAllProps } from './Components/Table/Table';
 import { EditingMode, FilteringMode, SortingMode } from './enums';
 import { ChildComponents, Column, EditableCell, Group, VirtualScrolling } from './models';
 import { GroupedColumn } from './Models/GroupedColumn';
 import { DispatchFunc, Field, FormatFunc, ValidationFunc } from './types';
+import { Dispatch, SetStateAction } from 'react';
 
 export interface IColGroupProps {
   columns: Column[];
@@ -153,6 +153,9 @@ export interface ITableHeadProps {
   filteringMode: FilteringMode;
   groupColumnsCount: number;
   sortingMode: SortingMode;
+  summaryCollapsibleRow?: boolean;
+  isTableBodyCollapsed?: boolean;
+  data?: unknown[];
 }
 
 export interface ITableBodyProps {
@@ -173,6 +176,7 @@ export interface ITableBodyProps {
   selectedRows: any[];
   validation?: ValidationFunc;
   virtualScrolling?: VirtualScrolling;
+  isTableBodyCollapsed?: boolean;
 }
 
 export interface ITableFootProps extends ITableAllProps {
@@ -236,6 +240,13 @@ export interface IHeadRowProps {
   groupColumnsCount: number;
   groupedColumns?: GroupedColumn[];
   sortingMode: SortingMode;
+  setHeaderRowHeight?: Dispatch<SetStateAction<number | undefined>>
+}
+
+export interface ISummaryLine extends IHeadRowProps {
+  isTableBodyCollapsed?: boolean
+  top: number;
+  data: unknown[] | undefined;
 }
 
 export interface ILoadingProps {

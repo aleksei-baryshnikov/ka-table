@@ -13,8 +13,11 @@ import { getUpdatedSortedColumns } from '../Utils/HeadRowUtils';
 import { getDownCell, getLeftCell, getRightCell, getUpCell } from '../Utils/NavigationUtils';
 import { getData, isValid, prepareTableOptions } from '../Utils/PropsUtils';
 import {
-  addColumnsToRowEditableCells, getEditableCellsByData, getUpdatedFocused,
-  getValidatedEditableCells, removeDataKeysFromSelectedRows,
+  addColumnsToRowEditableCells,
+  getEditableCellsByData,
+  getUpdatedFocused,
+  getValidatedEditableCells,
+  removeDataKeysFromSelectedRows,
 } from '../Utils/ReducerUtils';
 import { getExpandedParents } from '../Utils/TreeUtils';
 
@@ -408,6 +411,9 @@ const kaReducer: any = (props: ITableProps, action: any): ITableProps => {
         currentExpanded = getExpandedParents(preparedOptions.groupedData, rowKeyField);
       }
       return { ...props, treeGroupsExpanded: currentExpanded.filter(item => item !== rowKeyValue) };
+    }
+    case ActionType.CollapseTableBody: {
+      return { ...props, isTableBodyCollapsed: props.isTableBodyCollapsed === undefined ? false : !props.isTableBodyCollapsed }
     }
   }
   return props;

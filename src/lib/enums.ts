@@ -1,4 +1,3 @@
-
 export enum PagingPosition {
   Bottom = 'bottom',
   Top = 'top',
@@ -77,7 +76,8 @@ export enum ActionType {
   UpdateSortDirection = 'UpdateSortDirection',
   UpdateTreeGroupsExpanded = 'UpdateTreeGroupsExpanded',
   UpdateVirtualScrolling = 'UpdateVirtualScrolling',
-  Validate = 'Validate'
+  Validate = 'Validate',
+  CollapseTableBody = 'CollapseTableBody'
 }
 
 export enum KeyboardEnum {

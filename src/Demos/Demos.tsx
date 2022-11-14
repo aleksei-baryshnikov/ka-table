@@ -76,6 +76,7 @@ import SummaryDemo from './SummaryDemo/SummaryDemo';
 import TabIndexDemo from './TabIndexDemo/TabIndexDemo';
 import TreeModeDemo from './TreeModeDemo/TreeModeDemo';
 import ValidationDemo from './ValidationDemo/ValidationDemo';
+import SummaryCollapsibleRowDemo from './SummaryCollapsibleDemo/SummaryCollapsibleRowDemo';
 
 initializeGA();
 
@@ -146,6 +147,7 @@ const demos: Demo[] = [
   new Demo(TabIndexDemo, '/tab-index', 'Tab Index', 'TabIndexDemo', 'https://stackblitz.com/edit/table-tab-index-js', 'https://stackblitz.com/edit/table-tab-index-ts', 'Miscellaneous'),
   new Demo(TreeModeDemo, '/tree-mode', 'Tree Mode', 'TreeModeDemo', 'https://stackblitz.com/edit/table-tree-mode-js', 'https://stackblitz.com/edit/table-tree-mode-ts', ''),
   new Demo(ValidationDemo, '/validation', 'Validation', 'ValidationDemo', 'https://stackblitz.com/edit/table-validation-js', 'https://stackblitz.com/edit/table-validation-ts', 'Editing'),
+  new Demo(SummaryCollapsibleRowDemo, '/summary-collapsible-row', 'Summary Collapsible Row', '', '', '')
 ];
 
 const cases: DemoCase[] = demos.map((d: Demo) => {
